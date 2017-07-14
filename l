@@ -1,5 +1,5 @@
 #! /bin/bash
-VERSION=2.0
+VERSION=1.9.0
 HOWMANYTOOLS=24
 BACKL="0"
 #############DEFAULTS###############
@@ -65,7 +65,7 @@ function banner
 	echo -e ""
 	echo -e "$RS         ██╗      █████╗ ███████╗██╗   ██╗$CE v$VERSION"
 	echo -e "$RS         ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝$CE"
-	echo -e "$RS         ██║     ███████║  ███╔╝  ╚████╔╝ $CE   by "$RS"Rhythm Kr Dasgupta"
+	echo -e "$RS         ██║     ███████║  ███╔╝  ╚████╔╝ $CE   by "$RS""
 	echo -e "$RS         ██║     ██╔══██║ ███╔╝    ╚██╔╝  $CE"
 	echo -e "$RS    The  ███████╗██║  ██║███████╗   ██║  script$CE"
 	echo -e "$RS         ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   $CE"
