@@ -1,0 +1,117 @@
+#! /bin/bash
+#############DEFAULTS###############
+#setting yellow-start 
+YS="\e[1;33m"
+#setting color-end
+CE="\e[0m"
+#setting red-start
+RS="\e[1;31m"
+#setting frequent stings
+YNYES="("$YS"y"$CE"/"$YS"n"$CE")("$YS"Enter"$CE"=yes)"
+YNNO="("$YS"y"$CE"/"$YS"n"$CE")("$YS"Enter"$CE"=no)"
+YNONLY="("$YS"y"$CE"/"$YS"n"$CE")"
+PAKT="Press "$YS"any key$CE to"
+PAKTC="Press "$YS"any key$CE to continue..."
+PAKTGB="Press "$YS"any key$CE to go back..."
+
+####################################
+WLANNM=$(cat /root/lscript/wlanmon.txt)
+export WLANNM
+echo -e "---------------------------"$RS"WEP hacking"$CE"---------------------------"
+printf '\033]2;WEP MENU\a'
+if [ ! -z ${WEPB+x} ]
+then
+	echo -e "BSSID: $WEPB"
+else
+	echo -e "Target's BSSID not set"
+fi
+if [ ! -z ${WEPC+x} ]
+then
+	echo -e "Channel: $WEPC"
+else
+	echo -e "Target's channel not set"
+fi
+echo -e ""$YS" w"$CE") WifiTe                           All attacks"
+echo -e ""$YS" 1"$CE") Scan for nearby networks"
+echo -e ""$YS" 2"$CE") Start capturing ivs"
+echo -e ""$YS" 3"$CE") Fakeauth-arpreplay               If no clients connected"
+echo -e ""$YS" 4"$CE") Fakeauth-fragmentation           not yet"
+echo -e ""$YS" 5"$CE") Chop-chop                        not yet"
+echo -e ""$YS" 6"$CE") Aircrack the ivs"
+echo -e ""$YS" 7"$CE") WiFi autopwner - automated tool"
+#~ echo -e ""$YS"00"$CE") Main menu"
+echo -e ""$YS" 0"$CE") EXIT"
+echo -e "Choose: "
+read WEP
+if [ "$WEP" = "1" ]
+then
+	clear
+	airodump-ng $WLANNM
+elif [ "$WEP" = "2" ]
+then
+	WEP=-1
+	echo -e "Enter your target's bssid: "
+	read -e WEPB
+	echo -e "Enter your target's channel: "
+	read -e WEPC
+	echo -e "Enter the name of the file(no extension): "
+	echo -e "(don't use the same name twice)"
+	read -e WEPF
+	WEPFF="/root/handshakes/WEP/$WEPF-01.cap"
+	export WEPB
+	export WEPC
+	export WEPF
+	export WEPFF
+	gnome-terminal -e lh41
+elif [ "$WEP" = "w" ]
+then
+	clear
+	wifite
+elif [ "$WEP" = "3" ]
+then
+	gnome-terminal -e lh43
+	gnome-terminal -e lh42
+#~ elif [ "$WEP" = "4" ]
+#~ then
+	#~ clear
+#~ elif [ "$WEP" = "5" ]
+#~ then
+	#~ clear
+elif [ "$WEP" = "6" ]
+then
+	aircrack-ng $WEPFF
+elif [ "$WEP" = "7" ]
+then
+	cd /root/WiFi-autopwner
+	./wifi-autopwner.sh
+	cd
+elif [ "$WEP" = "0" ]
+then
+	clear
+	exit
+#~ elif [ "$WEP" = "00" ]
+#~ then
+	#~ clear
+	#~ exec bash "$0"
+else 
+	clear
+	echo -e "Wrong choice"
+	sleep 0.3
+	clear
+	exec bash "$0"
+fi
+echo -e "Choose again?"$YNYES": "
+read -e CAG
+if [ "$CAG" = "n" ]
+then
+	clear
+	exit
+else
+	if [ "$WEP" = "1" ]
+		then
+		exec bash "$0"
+	else
+		clear
+		exec bash "$0"
+	fi
+fi

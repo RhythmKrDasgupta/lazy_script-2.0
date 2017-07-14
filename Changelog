@@ -1,0 +1,174 @@
+1.9.9
+Added information gathering menu in tools.
+Improved code
+Added ReconDog in information gathering tools menu
+Added RED HAWK in information gathering tools menu
+Added Sniper in information gathering tools menu
+Fixed anonym8 not installed error
+Fixed error in code on install/reinstall tools manu
+Added ReconDog to shortcuts
+Added RED HAWK to shortcuts
+
+1.9.8
+Improved handshake feature
+Added echoing the handshake directory
+Added an error fix in errors menu
+Improved code in main menu
+Fixed layout in main manu when interface names are different
+
+
+1.9.7.1
+Fixed tiny error when launching script
+
+1.9.7
+Added open networks in handshake menu
+Improved tools menu
+
+1.9.6
+Added Handshake clean option
+Improved WPS PIN cracking code
+Improved Handshake feature
+
+
+1.9.5
+Added handshake automation like fluxion.No more copy-paste mac and channel
+Added more functions,code easier to read.
+Eternalblue added '0' target
+Added eternalblue checking in hidden shortcuts
+
+
+1.9.4
+Added two way handshake validation
+Custom shortcuts now will not be deleted when updating
+Fixed typos etc
+
+
+1.9.3.2
+Spoofed email fixes and additions
+Added changelog to hidden shortcuts
+
+
+1.9.3.1
+quick installer fix
+
+
+1.9.3
+Changed script's layout
+Added better locating on installer when a tools is already installed
+Added Spoof EMAIL feature
+Added more functions to code.Easier to read. 32 functions
+More changes to code 
+
+
+1.9.2
+Added more functions to code.Easier to read.
+Replaced 4nonimizer with anonym8
+Added option to create a listener when creating a payload
+Added encoder to metasploit payload creation
+Added msfconsole launcher and msfupdate to metasploit menu
+Added hidden shortcuts feature
+Added eternalblue exploit automation in hidden features
+Added Angry IP Scanner to wifi tools
+Option to autostart monitor mode when not already and needed
+Scan for networks on spesific channel option
+
+
+1.9.1
+Improved code when going back on navigation manus
+Added support for all wireless interface names
+Added many functions and improved code
+Added hidden shortcuts menu
+
+
+1.9
+Added option to install/reinstall a tool within lscript
+Huge code change on the installer, now lscript installs first, then the tools,only if you want
+Added openvas to Tools, NOT installed by default
+Added TheFatRat to Remote access
+Improved code on keyboard shortcuts
+Added Metasploit listener creation and saving.Metasploit automation.
+
+
+
+1.8
+Massive update to installer(updates now are installed x100 faster)
+"7) View your Public IP" option now loads a lot faster
+Added "back" option to menus for easier navigation
+Added custom keyboard shortcuts option
+Added handshake validation
+Added site clonning + dnsspoofing in MITM scripts
+Added bully wps tool
+Added WiFi autopwner toolT
+Added Zirikatu payload generator
+Added view changelog option
+Added metasploit payload creation automation
+Latest fluxion added
+Improved code in menus(added while loops)
+Improved code, many functions added
+Improved code, more default variables for easy and fast changes
+
+1.7
+Added mdk3 deauth method
+Removed mac changing of eth0 when typing "start"
+Added deauth option even for no file capture
+Fluxion updated!
+Added websploit wifi tool
+Added new fix in "errors"
+Added Pupy to remote access
+
+1.6
+Fixed BeeLogger install error
+Added sslstrip2
+Added dns2proxy
+Added MITM password sniffing automation
+Replaced anonym8 with anonsurf
+Replaced torghost with 4nonimizer
+
+
+1.5
+organised some code
+fixed random bugs
+fixed mistake when selecting xerxes dos tool
+checking if monitor mode enabled on options 10 11 12
+checking if monitor mode disabled on option 7
+
+
+
+1.4
+Fixed typos
+Updated installer 
+Added xterm bottom right position when deauthing on handshake capture
+Added pixie dust WPS pin cracking
+Changed WPS pin cracking code
+Improved position of new gnome-terminals on handshake and WPS pin finding features
+Improved update feature , testing connection before updating
+
+
+1.3
+Fixed colors on interface selection
+Added "Main menu" and "Exit" on interface selection
+Added option to not create a file on handshake capture
+Added .csv and .netxml file cleanup on handshake capture
+Fixed typo on install.sh
+
+1.2
+removed shARP as it has problems
+added Xerxes DoS tool
+added ezsploit tool on remote access
+added ezsploit to installer
+added Katana framework on wifi tools
+added Katana framework on installer
+added wifiphisher compatibility if you only have one wlan inteface
+added airgeddon to wifi tools
+added airgeddon to installer
+
+0.3
+added wifite to WEP hacking
+added shARP network defender on Tools
+added shARP installation to install.sh
+added mdk3-master to Tools
+added mdk3-master to install.sh
+added wash error on error-fixing (type "errors")
+
+0.2
+Added ghost phisher tool
